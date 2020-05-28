@@ -20,9 +20,9 @@
 
 ### 一、新建Auth客户端。不要去Google Developers Console中创建，点“创建AUTH客户端就行”。
 
-![1](file://img/0.png?lastModify=1590645698)
+![1](img/0.png?lastModify=1590645698)
 
-![2](file://img/1.png?lastModify=1590645698)
+![2](img/1.png?lastModify=1590645698)
 
 ### 二、点击“在Google Developers Console”中查看，下载对应的json格式的配置文件。
 
