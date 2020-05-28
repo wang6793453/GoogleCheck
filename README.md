@@ -50,7 +50,6 @@ refreshToken=
 ![5](img/1221.png)
 
 
-
 ### 终
 
 最终成功支付一笔订单后，用purchaseToken在本地测试完后，就OK了。最终提供给你们的后台开发人员就3个值：client_id、client_secret、refresh_token。他们需要做的是：
