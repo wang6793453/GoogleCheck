@@ -16,9 +16,9 @@ class GooglePay {
     public static void main(String[] args) {
 
         //官方文档：https://developers.google.com/android-publisher/authorization
-        //按照文档配置完后，进行下面步骤
+        //按照文档配置完后，获取到json格式的配置文件。
 
-        //第一步下载得到json配置文件，将json文件中的内容，粘贴到local.properties文件中
+        //第一步 将json文件中的内容，粘贴到local.properties文件中
         String jsonFileString = Util.getProperty("json_file_value");
         ConfigData.InstalledBean installedBean = new Gson().fromJson(jsonFileString, ConfigData.class).getInstalled();
         if (installedBean == null) {
@@ -50,8 +50,7 @@ class GooglePay {
         String accessToken = getAccessToken(installedBean, refreshToken);
         System.out.printf("the accessToken is:%s \n", accessToken);
 
-
-        //最后一步：使用accessToken去请求接口：
+        //最后一步：使用accessToken去请求接口，purchaseToken是每一笔订单支付成功后返回的。
         System.out.println("检查测试数据。");
         System.out.println(HttpUtil.sendGet(getCheckUrl(accessToken, "android.test.purchased", "inapp:com.picaqiu.bikabika:android.test.purchased")));
         System.out.println("检查假数据");
