@@ -8,13 +8,13 @@
 
 ## 步骤
 
-### 一、新建Auth客户端。不要去Google Developers Console中创建，点“创建AUTH客户端就行”。
+### 一、进入Google Play Console，新建Auth客户端。不要去Google Developers Console中创建，点“创建AUTH客户端”就行。
 
 ![1](img/0.png?lastModify=1590645698)
 
 ![2](img/1.png?lastModify=1590645698)
 
-### 二、点击“在Google Developers Console”中查看，下载对应的json格式的配置文件。
+### 二、点击“在Google Developers Console中查看”，下载对应的json格式的配置文件。
 
 ![3](img/2.png)
 
@@ -22,7 +22,7 @@
 
 ### 三、使用我提供的Java项目进行半自动化操作。
 
-1.**必须创建配置文件： src/main/local.properties**，文件内容如下（package_name和json_file_value此刻应该填写完毕，code和refreshToken在后续步骤中会拿到）
+1.**必须在本项目中创建配置文件： src/main/local.properties**，文件内容如下（package_name和json_file_value此刻应该填写完毕，code和refreshToken在后续步骤中会拿到）
 
 ```properties
 #填写你的包名
@@ -42,7 +42,7 @@ refreshToken=
 
 ### 终
 
-最终成功支付一笔订单后，用purchaseToken在本地测试完后，就OK了。最终提供给你们的后台开发人员就3个值：client_id、client_secret、refresh_token。他们需要做的是：
+如何测试？真实支付一笔订单后，用purchaseToken在本地测试，确认无误。最终提供给你们的后台开发人员就3个值：client_id、client_secret、refresh_token。他们需要做的是：
 
 ![6](img/1aq.png)
 
